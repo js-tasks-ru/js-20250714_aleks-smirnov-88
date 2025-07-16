@@ -6,6 +6,5 @@
  * @returns {number}
  */
 export const sum = (m, n) => {
-  //test
   return m + n;
 };
