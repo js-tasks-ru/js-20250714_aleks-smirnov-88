@@ -8,7 +8,6 @@ export function sortStrings(arr, param = 'asc') {
   if (['asc', 'desc'].includes(param)) {
     const result = [...arr].sort((a,b) => a.localeCompare(b,['ru', 'en'], { caseFirst: "upper" }));
     if (param === 'asc') {
-
       return result;
     }
 
