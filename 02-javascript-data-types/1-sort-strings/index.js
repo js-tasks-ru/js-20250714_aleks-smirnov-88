@@ -5,5 +5,14 @@
  * @returns {string[]}
  */
 export function sortStrings(arr, param = 'asc') {
+  if (['asc', 'desc'].includes(param)) {
+    let result = arr.toSorted((a,b) => a.localeCompare(b,['ru', 'en'], { caseFirst: "upper" }));
+    if (param === 'asc') {
 
+      return result;
+    }
+
+    return result.reverse();
+  }
+  throw new Error('Sorted arrays parameter must be "asc" or "desc"');
 }
